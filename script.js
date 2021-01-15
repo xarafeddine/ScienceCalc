@@ -1,5 +1,5 @@
 
-alert("welcom to ask science");
+//alert("welcom to ask science");
 
 //equation solver :
 function geto () {
