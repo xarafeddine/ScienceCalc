@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+                    <!-- This is a comment -->
+
+
+<head>
+    <title>This is my first web page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+
+    <script src = "script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="logo"><a href="home.html" url="logo"></a></div>
+        <h2>ASK SCIENCE</h2>
+        
+    </header>
+
+
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="search-container">
+        <div action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="leftmenu" style="background-color:#bbb;">
+        <h2>Menu</h2>
+        <input type="text" id="mySearch" onkeyup="mysearch()" placeholder="Search.." title="Type in a category">
+        <ul id="myMenu">
+            <li><a href="#">function's curve</a></li>
+            <li><a href="matrix.html">Matrix calculator</a></li>
+            <li><a href="systems.html">Systems of linear equations</a></li>
+            <li><a href="qe-solver.html" style="background-color: #eee;">Quadratic equation solver</a></li>
+            <li><a href="converter.html">Number systems converter</a></li>
+
+        </ul>
+        </div>
+        
+        <div class = "main">
+
+
+            <form class="form1">
+                <h1>Quadratic equation Solver</h1>
+                <p>To solve an equation of the form "ax^2 + bx + c = 0"
+                    Just enter the values of a, b and c below:</p>
+                <p>Enter the equation</p>
+                <p>
+                    <span ><input id="a" type="number" /></span>
+                    <span>X^2 +</span>
+                    <span ><input id="b" type="number" /></span>
+                    <span>X +</span>
+                    <span ><input id="c" type="number" /></span>
+                    <span> = 0</span>
+                </p>
+                <button type="button" onclick="geto()">Submit</button>
+                <p id="demo">the solution will appear here</p>
+            </form>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+        
+
+        </div>
+
+        
+
+    </div>
+
+    <footer>
+        COPYRIGHT&copy; : Created By Xaraf Eddine | nu01280@gmail.com | 2020 All rights reserved.
+    </footer>
+
+    
+</body>
+
+
+</html>

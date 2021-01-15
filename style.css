@@ -1,0 +1,715 @@
+/* style for every page : ---------------------------------------------------------  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.container {
+  display: flex;
+}
+
+h1{
+  text-align: center;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  background-image: url("img/Screenshot.png");
+  background-size: 100%;
+  background-position: center;
+  height: 400px;
+}
+header .logo a {
+  background-image: url("img/ASK SCIENCE 7.png");
+  background-size: 300px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 160px;
+  width: 300px;
+}
+
+body {
+  margin: 0 ;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('img/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:#e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+  
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+  
+  
+
+
+
+/* Left column (menu) */
+.leftmenu {
+  flex: 20%;
+  padding: 15px 0;
+}
+
+.leftmenu h2 {
+  padding-left: 8px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+
+
+
+
+/* style the main content */
+
+.main {
+  flex: 80%;
+  font-size: 20px; /* Increased text to enable scrolling */
+  margin-bottom: 3cm;
+  
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+form{
+  padding: 0px 25px;
+  margin : 25px;
+  
+}
+
+/* my-form */
+
+.my-form input[type="text"], .my-form textarea{
+  padding:8px;
+  width:100%;
+
+}
+
+
+/* FOOTER */
+
+footer {
+  background: black;
+  color: gray;
+  font-size: 12px;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+
+/* end ------------------------------------------------------------------------------------------------------- */
+
+
+
+/* style eq-solver */
+.form1 input{
+  width: 50px;
+  height: 30px;
+
+}
+
+
+
+
+
+/* style converter */
+.converto {
+  box-sizing:border-box;
+  text-align: center;
+  
+}
+.selecto {
+  width: 200px;
+  height: 40px;
+  padding:0px 10px;
+}
+
+
+.from {
+  float:left;
+  width: 40%;
+  display: block;
+  
+}
+.from input {
+  width: 250px;
+  height: 50px;
+  padding:0px 10px;
+  
+  
+}
+
+.to {
+  float: right;
+  width: 40%;
+  display: block;
+  
+}
+
+.rslt {
+  /* border:1px solid black;
+  border-radius: 8%; */
+  width: 250px;
+  height: 50px;
+  padding:0px 10px;
+  
+  
+
+}
+
+.center {
+  float:left;
+  width:20%;
+  display: block;
+  
+}
+
+.convert_btn {
+  font-size: medium;
+  font-weight: bold;
+  width: 100px;
+  height: 40px;
+  padding:0px 10px;
+  
+  
+}
+@media screen and (max-width:1000px) {
+  .to  , .center, .from {width:100%;}
+}
+
+
+
+
+
+
+
+/* style matrix */
+.form3{
+  
+  text-align: center;
+}
+
+.mat_A {
+  display: inline-block ;
+  margin:10px 10px ;
+}
+
+.mat_B {
+  display: inline-block ;
+  margin:10px 10px ;
+}
+
+
+.xmat {
+  display: inline-block ;
+
+}
+
+
+/* style systems */
+.form4{
+  
+  text-align: center;
+}
+.form4 input{
+  width: 50px;
+  height: 30px;
+
+}
+
+
+
+
+/* commun in matrix & systems */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+
+
+.panel {
+  padding: 0px 18px;
+  text-align: left;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+/* Style the close button */
+.Xclose {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.Xclose:hover {color: red;}
+
+
+
+.matrix {
+  position: relative;
+  display: inline-block;
+  margin :10px;
+}
+.matrix:before, .matrix:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 1px solid #000;
+  width: 6px;
+  height: 100%;
+}
+.matrix:before {
+  left: -6px;
+  border-right: 0;
+}
+.matrix:after {
+  right: -6px;
+  border-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* all similar content styling codes */
+section{
+  padding: 40px 0;
+  color:rgb(0, 0, 0);
+  
+  margin: 20px;
+  background: rgb(255, 255, 255);
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+.max-width{
+  max-width: 1300px;
+  padding: 0 30px;
+  margin: auto;
+}
+.about, .services, .contact, footer{
+  font-family: 'Poppins', sans-serif;
+}
+.about .about-content, 
+.services .serv-content,
+.contact .contact-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+section .title{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+section .title::after{
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: blue;
+  padding: 0 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+
+
+
+
+/* services section styling */
+
+.services .title::before {
+  background: rgb(0, 0, 0);
+}
+.services .title::after {
+  color:blue;
+  content: "what i provide";
+}
+.services .serv-content .card{
+  margin-bottom: 20px;
+  width: calc(50% - 20px);
+  height:200px;
+  background: #ccc;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+  background:rgb(52, 66, 255);
+}
+.services .serv-content .card .box{
+  transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+  transform: scale(1.05);
+}
+.services .serv-content .card i{
+  font-size: 50px;
+  color: rgb(20, 23, 220);
+  transition: color 0.3s ease;
+}
+.services .serv-content .card:hover i{
+  color: #fff;
+}
+.services .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  
+  color: black;
+}
+.box p{
+  color: black;
+}
+
+@media (max-width: 900px) {
+
+  .services .serv-content .card{
+    
+    width: 100%;
+    height:180px;
+  }
+
+}
+
+
+
+
+
+
+
+/* about section styling */
+.about .title::after{
+  content: "who i am";
+}
+.about .about-content .left{
+  width: 45%;
+}
+.about .about-content .left img{
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.about .about-content .right{
+  width: 55%;
+}
+.about .about-content .right .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+  color: blue;
+}
+.about .about-content .right p{
+  text-align: justify;
+}
+.about .about-content .right a{
+  display: inline-block;
+  background: blue;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid blue;
+  transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+  color: blue;
+  background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact section styling */
+.contact .title::after{
+  content: "get in touch";
+}
+.contact .contact-content .column{
+  width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+  text-align: justify;
+}
+.contact .contact-content .left .icons{
+  margin: 10px 0;
+}
+.contact .contact-content .row{
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact-content .row .info{
+  margin-left: 30px;
+}
+.contact .contact-content .row i{
+  font-size: 25px;
+  color: blue;
+}
+.contact .contact-content .info .head{
+  font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+  color: #333;
+}
+.contact .right form .fields{
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .right form .textarea{
+  height: 80px;
+  width: 100%;
+}
+.contact .right form .name{
+  margin-right: 10px;
+}
+.contact .right form .email{
+  margin-left: 10px;  
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+  border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button{
+  height: 47px;
+  width: 170px;
+}
+.contact .right form .button button{
+  width: 100%;
+  height: 100%;
+  border: 2px solid blue;
+  background: blue;
+  color: #fff;
+  outline: none;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+  color: blue;
+  background: none;
+}
+
+
+
+
+@media (max-width: 1150px) {
+  .about .about-content .left img{
+      height: 350px;
+      width: 350px;
+  }
+  .about .about-content .column{
+    width: 100%;
+  }
+  .about .about-content .left{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 60px;
+  }
+  .about .about-content .right{
+      flex: 100%;
+  }
+
+  .contact .contact-content .column{
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  
+}

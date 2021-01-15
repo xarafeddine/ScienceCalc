@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+                    <!-- This is a comment -->
+
+
+<head>
+    <title>This is my first web page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+
+    <script src = "script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="logo"><a href="home.html" url="logo"></a></div>
+        <h2>ASK SCIENCE</h2>
+        
+    </header>
+
+
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="search-container">
+        <div action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="leftmenu" style="background-color:#bbb;">
+        <h2>Menu</h2>
+        <input type="text" id="mySearch" onkeyup="mysearch()" placeholder="Search.." title="Type in a category">
+        <ul id="myMenu">
+            <li><a href="#">function's curve</a></li>
+            <li><a href="matrix.html">Matrix calculator</a></li>
+            <li><a href="systems.html" style="background-color: #eee;" >Systems of linear equations</a></li>
+            <li><a href="qe-solver.html">Quadratic equation solver</a></li>
+            <li><a href="converter.html">Number systems converter</a></li>
+
+        </ul>
+        </div>
+        
+        <div class = "main">
+
+
+            <form class="form4">
+                <h1>Matrix Calculator :</h1>
+                
+                <p class="system_unknowns" >
+                  Select the number of unknowns: 
+                  <br>
+                  &nbsp;
+                  <input id="unknowns" type="number" value="3" min="2" step="1" onchange="create_system()"/>
+                  
+                </p>
+                
+                
+                <p style="font-family: Georgia, Times, serif ; font-style:italic; font-weight:lighter; font-size: 15px;"><b>Note:</b><br>
+                  use Math.pow(x,n) to calculate x to the power of n .<br>
+                  use Math.sqrt(x) to calculate the sqare root of x .</p>
+                
+                  <br>
+                  <div id="the_system">&nbsp;&nbsp;&nbsp;<input id="A_0_0" type="number" value="2"> X<sub>1</sub>&nbsp;&nbsp;&nbsp;
+                    +&nbsp;&nbsp;&nbsp;<input id="A_0_1" type="number" value="3"> X<sub>2</sub>&nbsp;&nbsp;&nbsp;
+                    +&nbsp;&nbsp;&nbsp;<input id="A_0_2" type="number" value="2"> X<sub>3</sub>&nbsp;&nbsp;&nbsp;
+                    =&nbsp;&nbsp;&nbsp;<input id="b_0" type="number" value="1"><br><br>&nbsp;&nbsp;&nbsp;
+                    <input id="A_1_0" type="number" value="2"> X<sub>1</sub>&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;
+                    <input id="A_1_1" type="number" value="2"> X<sub>2</sub>&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;
+                    <input id="A_1_2" type="number" value="2"> X<sub>3</sub>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;
+                    <input id="b_1" type="number" value="1"><br><br>&nbsp;&nbsp;&nbsp;<input id="A_2_0" type="number" value="2">
+                     X<sub>1</sub>&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;<input id="A_2_1" type="number" value="2"> X<sub>2</sub>
+                     &nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;<input id="A_2_2" type="number" value="4"> X<sub>3</sub>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;
+                     <input id="b_2" type="number" value="1"><br><br></div>
+                  <br>
+      
+      
+      
+                  <br>
+                  
+                  <div id="d">
+                    
+                  </div>
+                  <div id="dem">
+                    
+                  </div>
+                  <div id="demo">
+                    
+                  </div>
+                  <br>
+                    
+                    <div class="accordion" id='acc_12'>
+                      GET SYS
+                      <button class="button"type="button" onclick=" get_system() ,panel('panel_12','acc_12') ">calculate</button>
+                    </div>  
+                    <div class="panel" id='panel_12'>
+                      <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_12').classList.remove('active') " class="Xclose">&times</span>
+                      
+      
+                      <div id="GET_sys"></div>
+                      
+                    </div>
+      
+      
+                    <div class="accordion" id='acc_13'>
+                    solve using the inverse matrix
+                    <button class="button"type="button" onclick=" sys_inverse() ,panel('panel_13','acc_13') ">calculate</button>
+                    </div>  
+                    <div class="panel" id='panel_13'>
+                      <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_13').classList.remove('active') " class="Xclose">&times</span>
+                      <p style="font-family: Georgia, Times, serif ; font-style:italic; font-weight:lighter; font-size: 15px;">
+                      the answer's formula goes like this:
+                      X = A<sup>-1</sup> * b </p>
+                      <br>
+      
+                      <div id="sys_inverse"></div>
+                    </div>
+      
+      
+                    <div class="accordion" id='acc_14'>
+                    solve using Cramer Method
+                    <button class="button"type="button" onclick="  sys_cramer() ,panel('panel_14','acc_14') ">calculate</button>
+                    </div>  
+                    <div class="panel" id='panel_14'>
+                      <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_14').classList.remove('active') " class="Xclose">&times</span>
+                      <p style="font-family: Georgia, Times, serif ; font-style:italic; font-weight:lighter; font-size: 15px;">
+                        the answer's formula goes like this:
+                        X<sub>i</sub> = A<sub>i</sub> / det(A) </p>
+                      <br>
+                      
+                      
+                      <div id="CRAMER"></div>
+                    </div>
+      
+      
+                    <div class="accordion" id='acc_15'>
+                      solve using Gausian elimination
+                      <button class="button"type="button" onclick="  sys_gause() ,panel('panel_15','acc_15') ">calculate</button>
+                    </div>  
+                      <div class="panel" id='panel_15'>
+                        <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_15').classList.remove('active') " class="Xclose">&times</span>
+                        
+                        
+                        <div id="sys_gause"></div>
+                      </div>
+      
+                    <div class="accordion" id='acc_16'>
+                      solve using cholesky's Method
+                      <button class="button"type="button" onclick="  sys_cholesky() ,panel('panel_16','acc_16') ">calculate</button>
+                    </div>  
+                    <div class="panel" id='panel_16'>
+                      <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_16').classList.remove('active') " class="Xclose">&times</span>
+                      <div id="sys_cholesky"></div>
+                    </div>
+      
+                    
+      
+                    <div class="accordion" id='acc_17'>
+                      solve using LU_DECOMPOSITION Method
+                      <button class="button"type="button" onclick="  sys_LU() ,panel('panel_17','acc_17') ">calculate</button>
+                    </div>  
+                    <div class="panel" id='panel_17'>
+                      <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_17').classList.remove('active') " class="Xclose">&times</span>
+                      <div id="sys_LU"></div>
+                    </div>
+                    
+                  
+              </form>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+        
+
+        </div>
+
+        
+
+    </div>
+
+    <footer>
+      COPYRIGHT&copy; : Created By Xaraf Eddine | nu01280@gmail.com | 2020 All rights reserved.
+    </footer>
+
+
+</body>
+
+
+</html>

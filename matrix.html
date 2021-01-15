@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+                    <!-- This is a comment -->
+
+
+<head>
+    <title>This is my first web page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+
+    <script src = "script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="logo"><a href="home.html" url="logo"></a></div>
+        <h2>ASK SCIENCE</h2>
+        
+    </header>
+
+
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="search-container">
+        <div action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="leftmenu" style="background-color:#bbb;">
+        <h2>Menu</h2>
+        <input type="text" id="mySearch" onkeyup="mysearch()" placeholder="Search.." title="Type in a category">
+        <ul id="myMenu">
+            <li><a href="#">function's curve</a></li>
+            <li><a href="matrix.html" style="background-color: #eee;" >Matrix calculator</a></li>
+            <li><a href="systems.html">Systems of linear equations</a></li>
+            <li><a href="qe-solver.html">Quadratic equation solver</a></li>
+            <li><a href="converter.html">Number systems converter</a></li>
+
+        </ul>
+        </div>
+        
+        <div class = "main">
+
+
+            <form class="form3">
+                <h1>Matrix Calculator :</h1>
+                <!--
+                <p class="matrix_degree" >
+                  Select the degree of the matrix: 
+                  <br>
+                  &nbsp;
+                  <input id="row" type="number" value="3"/>
+                  &nbsp;
+                  x
+                  &nbsp;
+                  <input id="column" type="number" value="3"/>
+      
+                </p>
+                -->
+                <p>Enter the matrix : as shown</p>
+                <p style="font-family: Georgia, Times, serif ; font-style:italic; font-weight:lighter; font-size: 15px;"><b>Note:</b><br>
+                  use Math.pow(x,n) to calculate x to the power of n .<br>
+                  use Math.sqrt(x) to calculate the sqare root of x .</p>
+                
+                    
+                  <!--
+                    <table class="mat_A">
+                      <tr>
+                        <th><input id="A_1_1" type="number" /></th>
+                        <th><input id="A_1_2" type="number" /></th>
+                        <th><input id="A_1_3" type="number" /></th>
+                      </tr>
+                      <tr>
+                          <th><input id="A_2_1" type="number" /></th>
+                          <th><input id="A_2_2" type="number" /></th>
+                          <th><input id="A_2_3" type="number" /></th>
+                      </tr>
+                      <tr>
+                          <th><input id="A_3_1" type="number" /></th>
+                          <th><input id="A_3_2" type="number" /></th>
+                          <th><input id="A_3_3" type="number" /></th>
+                      </tr>
+                    </table>
+                  -->
+                <div id ="MAT"></div>
+                <div class ='mat_A'><p>Matrix A</p>
+                  <textarea id="matrix_A" name="matrix_A" style=" padding: 10px 20px; font-size: 20px; height: 5cm; width: 8cm;">                  
+1 2 3
+4 5 6
+7 8 9
+                  </textarea>
+                </div>
+                <div class ='mat_B'><p>Matrix B<p>
+                  <textarea id="matrix_B" name="matrix_B" style="padding: 10px 20px; font-size: 20px; height: 5cm; width: 8cm;;">                  
+6 2 81
+0 8 1
+3 8 5
+                  </textarea>
+                </div>
+                  <br>
+            
+                    
+                    <div class="accordion" id='acc_0'>
+                    A + B
+                    <button class="button"type="button" onclick="  MplusM () ,panel('panel_0','acc_0') ">calculate</button>
+                    </div>  
+                    <div class="panel" id='panel_0'>
+                      <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_0').classList.remove('active') " class="Xclose">&times</span>
+                      <div id="ADD_matrix"></div>
+                    </div>
+      
+      
+                    <div class="accordion" id='acc_10'>
+                    A - B
+                    <button class="button"type="button" onclick="  MminusM () ,panel('panel_10','acc_10') ">calculate</button>
+                    </div>  
+                    <div class="panel" id='panel_10'>
+                      <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_10').classList.remove('active') " class="Xclose">&times</span>
+                      <div   id="SUBS_matrix"></div>
+                    </div>
+      
+      
+                    <div class="accordion" id='acc_9'>
+                    A * B
+                    <button class="button"type="button" onclick="  MtimesM () ,panel('panel_9','acc_9') ">calculate</button>
+                    </div>  
+                    <div class="panel" id='panel_9'>
+                      <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_9').classList.remove('active') " class="Xclose">&times</span>
+                      <div   id="MULTI_matrix"></div>
+                    </div>
+      
+      
+                    <div class="accordion" id='acc_11' >
+                      Raise  
+                      <select id="myList11" onchange="Rmtopow()">
+                        <option>A</option>
+                        <option>B</option>
+                      </select> 
+                      to the power of 
+                      
+                      <input id="power" onchange="Rmtopow()" type="number" value="2" style="width:50px;"/>
+                      <button class="button" type="button" onclick="Rmtopow() , panel('panel_11','acc_11')">calculate</button>
+                    </div>
+                      <div class="panel" id='panel_11'>
+                        
+                        <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_11').classList.remove('active') " class="Xclose">&times</span>
+                        <div   id="R_mat_topow"></div>
+                        
+                        
+                      </div>
+      
+                    
+                    <div class="accordion" id='acc_1' >
+                    multiply 
+                    <select id="myList1" onchange="multiply()">
+                      <option>A</option>
+                      <option>B</option>
+                    </select> 
+                    by <input id="multi" onchange="multiply()" type="number" value="2" style="width:50px;"/>
+                    <button class="button" type="button" onclick="multiply() , panel('panel_1','acc_1')">calculate</button>
+                    </div>
+                    <div class="panel" id='panel_1'>
+                    
+                      <span onclick="this.parentElement.style.maxHeight = null  , document.getElementById('acc_1').classList.remove('active') " class="Xclose">&times</span>
+      
+                      
+                      <div   id="NumXMat"></div>
+      
+                    </div>
+      
+      
+                    <div class="accordion" id='acc_2'>
+                    Determinant of 
+                    <select id="myList2" onchange="determinant()">
+                      <option>A</option>
+                      <option>B</option>
+                    </select>
+                    <button class="button"type="button" onclick=" determinant() ,panel('panel_2','acc_2') ">calculate</button>
+                    </div>  
+                    <div class="panel" id='panel_2'>
+                      <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_2').classList.remove('active') " class="Xclose">&times</span>
+                      <div id="matrix_determinant"></div>
+                    </div>
+                    
+      
+      
+                    <div class="accordion" id='acc_3'>
+                    Transpose of 
+                      <select id="myList3" onchange="transpose()">
+                        <option>A</option>
+                        <option>B</option>
+                      </select>
+                    <button class="button"type="button" onclick="transpose() , panel('panel_3','acc_3')">calculate</button>
+                    </div>
+                    <div class="panel" id='panel_3'>
+                      <span onclick="this.parentElement.style.maxHeight = null  , document.getElementById('acc_3').classList.remove('active') " class="Xclose">&times</span>
+                      <div   id="transpose"></div>
+                    </div>
+      
+                    <div class="accordion" id='acc_4'>
+                    Minors of matrix 
+                      <select id="myList4" onchange="minor_mat()">
+                        <option>A</option>
+                        <option>B</option>
+                      </select>
+                      <button class="button" type="button" onclick="minor_mat() ,panel('panel_4','acc_4')">calculate</button>
+                    </div>
+                    <div class="panel" id='panel_4'>
+                      <span onclick="this.parentElement.style.maxHeight = null  , document.getElementById('acc_4').classList.remove('active') " class="Xclose">&times</span>
+                      <div   id="minors"></div>
+                    </div>
+      
+      
+                    <div class="accordion" id='acc_5'>
+                    inverse matrix 
+                      <select id="myList5" onchange="inverse()">
+                        <option>A</option>
+                        <option>B</option>
+                      </select>
+                      <button class="button" type="button" onclick="inverse() , panel('panel_5','acc_5') ">calculate</button>
+                    </div>
+                    <div class="panel" id='panel_5'>
+                      <span onclick="this.parentElement.style.maxHeight = null  , document.getElementById('acc_5').classList.remove('active') " class="Xclose">&times</span>
+                      <div   id="inverse"></div>
+                    </div>
+      
+                    <div class="accordion" id='acc_6'>
+                    Gaussian elimination of 
+                      <select id="myList6" onchange="Gause()">
+                        <option>A</option>
+                        <option>B</option>
+                      </select>
+                      <button class="button" type="button" onclick="Gause() , panel('panel_6','acc_6')">calculate</button>
+                    </div>
+                    <div class="panel" id='panel_6'>
+                      <span onclick="this.parentElement.style.maxHeight = null  , document.getElementById('acc_6').classList.remove('active') " class="Xclose">&times</span>
+                      <div   id="Gause"></div>
+                    </div>
+      
+                    <div class="accordion" id='acc_7'>
+                    cholesky Decomposition of 
+                      <select id="myList7" onchange="cholesky()">
+                      <option>A</option>
+                      <option>B</option>
+                    </select>
+                    <button class="button" type="button" onclick="cholesky() , panel('panel_7','acc_7')">calculate</button>
+                    </div>
+                    <div class="panel" id='panel_7'>
+                      <span onclick="this.parentElement.style.maxHeight = null , document.getElementById('acc_7').classList.remove('active') " class="Xclose">&times</span>
+                      <div id="cholesky"></div>
+                    </div>
+      
+                    <div class="accordion" id='acc_8'>
+                    LU_Decomposition of 
+                      <select id="myList8" onchange="LU_Decomposition()">
+                        <option>A</option>
+                        <option>B</option>
+                      </select>
+                      <button class="button" type="button" onclick="LU_Decomposition() , panel('panel_8','acc_8')">calculate</button>
+                    </div>
+                    <div class="panel" id='panel_8'>
+                      <span onclick=" this.parentElement.style.maxHeight = null , document.getElementById('acc_8').classList.remove('active')  " class="Xclose">&times</span>
+                      <div id="UL"></div>
+                    </div>
+                  
+            </form>
+
+            <br>
+            <br>
+            <br>
+
+            
+
+        
+
+        </div>
+
+        
+
+    </div>
+
+    <footer>
+      COPYRIGHT&copy; : Created By Xaraf Eddine | nu01280@gmail.com | 2020 All rights reserved.
+    </footer>
+
+
+</body>
+
+
+</html>
