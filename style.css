@@ -4,6 +4,7 @@
 
 * {
   box-sizing: border-box;
+  text-decoration: none ;
   font-family: 'Ubuntu', sans-serif;
 }
 a{
@@ -16,15 +17,105 @@ a{
 h1{
   text-align: center;
 }
+.home {
+  
+  background-color: #f1f1f1;
+  padding: 4cm 0;
+  text-align: center;
+  background-image: url("img/LIGHT.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.home .logo a {
+  color:rgb(172, 172, 207);
+  
+  
+  
+  text-align: center;
+
+  font-size: 70px;
+  font-weight: 700;
+  
+
+}
+.home .logo a span{
+  color:rgb(255, 60, 0);
+
+
+}
+.home .logo h2 {
+  
+  font-weight: 10;
+
+}
+
+
+.arrow {
+  padding-top: 70px;
+  color:#b3b3b3;
+  
+}
+.arrow p {
+
+  margin: 4cm 0 ;
+  
+  
+}
+.arrow span {
+  position: absolute;
+  top: 10cm;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+
 
 header {
   background-color: #f1f1f1;
-  padding: 100px 30px 30px 30px;
+  padding: 60px 30px 30px 30px;
   text-align: center;
   background-image: url("img/Screenshot.png");
   background-size: 100%;
   background-position: center;
-  height: 400px;
+  height: 300px;
   align-items: center;
 }
 
@@ -33,14 +124,20 @@ header .logo a {
 
   text-align: center;
 
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 60px;
+  font-weight: 700;
   
 
 }
 header .logo a span{
   color:rgb(255, 60, 0);
 
+
+}
+header .logo h2 {
+  
+  font-weight: 50;
+  
 
 }
 
@@ -484,12 +581,13 @@ section .title::after{
 }
 .services .title::after {
   color:blue;
-  content: "what i provide";
+  content: "what I provide";
+  width:150px ;
 }
 .services .serv-content .card{
   margin-bottom: 20px;
   width: calc(50% - 20px);
-  height:200px;
+  height:auto;
   background: #ccc;
   text-align: center;
   border-radius: 6px;
@@ -529,7 +627,7 @@ section .title::after{
   .services .serv-content .card{
     
     width: 100%;
-    height:180px;
+    
   }
 
 }
@@ -542,7 +640,7 @@ section .title::after{
 
 /* about section styling */
 .about .title::after{
-  content: "who i am";
+  content: "our services";
 }
 .about .about-content .left{
   width: 45%;
@@ -567,22 +665,7 @@ section .title::after{
 .about .about-content .right p{
   text-align: justify;
 }
-.about .about-content .right a{
-  display: inline-block;
-  background: blue;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 10px 30px;
-  margin-top: 20px;
-  border-radius: 6px;
-  border: 2px solid blue;
-  transition: all 0.3s ease;
-}
-.about .about-content .right a:hover{
-  color: blue;
-  background: none;
-}
+
 
 
 
