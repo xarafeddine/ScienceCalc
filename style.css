@@ -6,6 +6,7 @@
   box-sizing: border-box;
   text-decoration: none ;
   font-family: 'Ubuntu', sans-serif;
+  scroll-behavior: smooth;
 }
 a{
   text-decoration: none;
