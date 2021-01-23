@@ -555,7 +555,7 @@ section .title::before{
   position: absolute;
   bottom: 0px;
   left: 50%;
-  width: 180px;
+  width: 200px;
   height: 3px;
   background: #111;
   transform: translateX(-50%);
@@ -582,8 +582,8 @@ section .title::after{
 }
 .services .title::after {
   color:blue;
-  content: "what I provide";
-  width:150px ;
+  content: "what do we provide";
+  
 }
 .services .serv-content .card{
   margin-bottom: 20px;
@@ -641,7 +641,7 @@ section .title::after{
 
 /* about section styling */
 .about .title::after{
-  content: "our services";
+  content: "who are we";
 }
 .about .about-content .left{
   width: 45%;

@@ -2,7 +2,7 @@
 
 hellow there
 I built this website to help the user solve some math problems (especially to Check if the calculations are correct).
-With using this website you can:
+By using this website you can:
   solve quadratic equations, 
   do matrix calculations, 
   solve systems of linear equations, 
