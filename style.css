@@ -18,6 +18,11 @@ a{
 h1{
   text-align: center;
 }
+
+
+
+
+
 .home {
   
   background-color: #f1f1f1;
@@ -610,7 +615,7 @@ section .title::after{
   color: rgb(20, 23, 220);
   transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
+.services .serv-content .card:hover i ,.services .serv-content .card:hover .icon{
   color: #fff;
 }
 .services .serv-content .card .text {
@@ -780,6 +785,20 @@ section .title::after{
 }
 
 
+/* icons */
+.contact .contact-content .left .fa {
+padding: 20px;
+font-size: 50px;
+width: 60px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+border-radius: 50%;
+}
+
+.contact .contact-content .left .fa:hover {
+  opacity: 0.7;
+}
 
 
 @media (max-width: 1150px) {
@@ -805,4 +824,10 @@ section .title::after{
   }
 
   
+}
+
+
+.icon {
+  font-size: 40px;
+  color: blue;
 }
